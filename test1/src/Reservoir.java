@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Reservoir {
- public final static ArrayList<Arme> ARMURERIE = new ArrayList(){
+    public final static ArrayList<Arme> ARMURERIE = new ArrayList(){
         {add(new Arme("Katana",100));
         add(new Arme("Epée",90));    
         add(new Arme("Hache",80));

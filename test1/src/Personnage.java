@@ -34,8 +34,8 @@ public class Personnage {
         return this.vie > 0;
     }
     public String rencontrer(Personnage autre) {
-        autre.toString();
-        this.toString();
+        System.out.println(autre.toString());
+        System.out.println(this.toString());
         if (this.getCouleur() == autre.getCouleur()) {
             return "Salut à toi " + autre.getNom() + " porte toi bien !";
         } else {
@@ -67,7 +67,7 @@ public class Personnage {
     }
 
     public String toLigne() {
-        return nom + " " + couleur + " " + (monArme != null ? monArme.getNom() : "aucune") + vie ; 
+        return nom + " " + couleur + " " + (monArme != null ? monArme.getNom() : "aucune") + " " + vie ; 
     }
 
 

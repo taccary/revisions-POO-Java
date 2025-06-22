@@ -19,8 +19,7 @@ public class Arme {
     }
 
     public String toLigne() {
-        return this.nom + " " + this.degats + " " + (this.personnage != null ? this.personnage.getNom() : "null")   
-                + "\n";
+        return this.nom + " " + this.degats + " " + (this.personnage != null ? this.personnage.getNom() : "null");
     }
 
     public Void setPersonnage(Personnage personnage) {

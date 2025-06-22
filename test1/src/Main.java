@@ -1,35 +1,41 @@
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        Arme a1 = new Arme("Epée", 10);
-        Arme a2 = new Arme("Arc", 5);
-        System.out.println(a1.toLigne());
-        System.out.println(a2.toLigne());
-        if (a2.jeSuisAffecte()) {
-            System.out.println("L'arme " + a2.getNom() + " est affectée.");
-        } else {
-            System.out.println("L'arme " + a2.getNom() + " n'est pas affectée.");
+        //déclaration des variables locales
+        Jeu j = new Jeu();
+        Personnage p1, p2;
+
+        //On affiche la situation de départ
+        System.out.println("---------Situation de départ---------");
+        System.out.println(Reservoir.getListeArmes());
+        System.out.println(j.getListePersonnages());
+        System.out.println("---------Le jeu commence...---------");
+
+        //tant que le jeu n'est pas fini
+        while(!j.fini()){
+             //Je récupère un personnage
+            p1 = j.getUnPersonnage();
+            
+            //Je récupère un 2ème personnage, autre que p1
+            do{
+                p2 = j.getUnPersonnage();
+            }while(p2 == p1);
+
+            //La rencontre a lieu
+            System.out.println(p1.rencontrer(p2));
+
+            //Test si p2 est encore vivant
+            if(!p2.jeSuisVivant()){
+           //p2 est mort affichage du message et suppression dans la collection
+                System.out.println(p2.getNom() + " meurt... et son arme (" + p2.getArme().getNom() + ") est détruite !");
+                j.retirer(p2);
+            }
+            //Affichage de la liste avant la rencontre suivante
+            System.out.println(j.getListePersonnages());
         }
 
-        Personnage p1 = new Personnage("Jean");
-        Personnage p2 = new Personnage("Marie");
-        p1.setArme(a1);
-        p1.setCouleur("Rouge");
-        p2.setArme(a2);
-        p2.setCouleur("Bleu");
-        a1.setPersonnage(p1);
-        a2.setPersonnage(p2);
-        System.out.println(p1.toLigne());
-        System.out.println(p2.toLigne());
-        System.out.println(p1.toString());
-        System.out.println(p2.toString());
-        System.out.println(p1.rencontrer(p2));
-        System.out.println(p2.jeSuisVivant());
-
-        
+        //Le jeu est fini, on affiche le camp gagnant
+        p1 = j.getUnPersonnage();
+        System.out.println("Le camp " + p1.getCouleur() + " gagne !!");
+        System.out.println("---------Fin du jeu...---------");
     }
-    
 }
