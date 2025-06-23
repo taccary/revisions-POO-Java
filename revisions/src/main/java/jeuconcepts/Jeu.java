@@ -1,3 +1,5 @@
+package jeuconcepts;
+
 import java.util.ArrayList;
 
 public class Jeu {

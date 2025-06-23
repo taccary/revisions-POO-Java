@@ -1,0 +1,5 @@
+# Java
+/bin/
+/target/
+/out/
+/*.class

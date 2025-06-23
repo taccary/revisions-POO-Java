@@ -1,3 +1,5 @@
+package jeuconcepts;
+
 public class Arme {
 
     private String nom;

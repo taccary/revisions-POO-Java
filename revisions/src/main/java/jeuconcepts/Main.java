@@ -1,3 +1,5 @@
+package jeuconcepts;
+
 public class Main {
     public static void main(String[] args) {
         //déclaration des variables locales
