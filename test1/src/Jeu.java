@@ -6,7 +6,7 @@ public class Jeu {
 
     public Jeu() {
         lesPersonnagesEnJeu = new ArrayList<Personnage>();
-        while (lesPersonnagesEnJeu.size() < 11) {
+        while (lesPersonnagesEnJeu.size() < 10) {
             // on tire au sort un personnage du Reservoir
             int index = (int) (Math.random() * Reservoir.PEUPLE.size());
             // on met la reference de l'objet du reservoir dans la collection 
@@ -25,11 +25,12 @@ public class Jeu {
                     Arme a = Reservoir.ARMURERIE.get(index2);
                     if (!a.jeSuisAffecte()) {
                         p.setArme(a); // On affecte l'arme au personnage
-                        a.setPersonnage(p); // On affecte l'arme au personnage                      }
+                        a.setPersonnage(p); // On affecte l'arme au personnage 
+                        System.out.println(a.getNom() + " a été affectée à " + p.getNom());
                     }
                 }
+                lesPersonnagesEnJeu.add(p);
             }
-            lesPersonnagesEnJeu.add(p);
         }
     }
 
@@ -53,9 +54,7 @@ public class Jeu {
     }
 
     public void retirer(Personnage p){
-        if(!p.jeSuisVivant()) {
-            lesPersonnagesEnJeu.remove(p);
-        }
+        lesPersonnagesEnJeu.remove(p);
     }
 
     public boolean fini() {

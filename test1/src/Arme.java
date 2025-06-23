@@ -23,8 +23,7 @@ public class Arme {
     }
 
     public Void setPersonnage(Personnage personnage) {
-        // This method seems to be incomplete or not needed in this context.
-        // If you want to associate an Arme with a Personnage, you might need to implement it differently.
+        this.personnage = personnage;
         return null;
     }
 
