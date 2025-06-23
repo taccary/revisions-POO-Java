@@ -5,13 +5,12 @@ public class Jeu {
     ArrayList<Personnage> lesPersonnagesEnJeu;
 
     public Jeu() {
-        Reservoir reservoir = new Reservoir();
         lesPersonnagesEnJeu = new ArrayList<Personnage>();
         while (lesPersonnagesEnJeu.size() < 11) {
             // on tire au sort un personnage du Reservoir
-            int index = (int) (Math.random() * reservoir.PEUPLE.size());
+            int index = (int) (Math.random() * Reservoir.PEUPLE.size());
             // on met la reference de l'objet du reservoir dans la collection 
-            Personnage p = reservoir.PEUPLE.get(index);
+            Personnage p = Reservoir.PEUPLE.get(index);
             if (!p.jeSuisAffecte()) {
                 // on lui affecte aléatoirement une couleur Bleu ou Rouge
                 if (Math.random() < 0.5) {
@@ -22,8 +21,8 @@ public class Jeu {
                 
                 // on parcours les armes du Reservoir jusqu'a en trouver une qui n'est pas affectée
                 while (p.getArme() == null) {
-                    int index2 = (int) (Math.random() * reservoir.ARMURERIE.size());
-                    Arme a = reservoir.ARMURERIE.get(index2);
+                    int index2 = (int) (Math.random() * Reservoir.ARMURERIE.size());
+                    Arme a = Reservoir.ARMURERIE.get(index2);
                     if (!a.jeSuisAffecte()) {
                         p.setArme(a); // On affecte l'arme au personnage
                         a.setPersonnage(p); // On affecte l'arme au personnage                      }
@@ -60,9 +59,9 @@ public class Jeu {
     }
 
     public boolean fini() {
-        boolean resultat = false;
+        boolean res = false;
         if( lesPersonnagesEnJeu.size() == 1) {
-            resultat = true;
+            res = true;
         } else {
             int nbBleus = 0;
             int nbRouges = 0;
@@ -74,10 +73,10 @@ public class Jeu {
                 }
             }
             if (nbBleus == 0 || nbRouges == 0) {
-                resultat = true; // Si tous les personnages d'une couleur sont éliminés, le jeu est fini
+                res = true; // Si tous les personnages d'une couleur sont éliminés, le jeu est fini
             }
         }
-        return resultat; // Placeholder return value
+        return res; // Placeholder return value
     }
     
 }
