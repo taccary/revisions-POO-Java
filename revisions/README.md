@@ -1,11 +1,13 @@
 # Projet Révisions d'été Java : Jeu de Combat de Personnages
 
 Ce projet est un petit jeu de combat entre 2 équipes de personnages créé par Hervé l'Helguen.
-La consigne du travail est donnée dans le fichier `Exercice Jeu Personnages Armes.pdf` situé à la racine du projet`.
-C'est un projet utilisé en devoir de vacances d'été pour les étudiants de SIO1-SLAM.
+C'est un projet utilisé en devoir de vacances d'été pour les étudiants de SIO1-SLAM. La consigne du travail est donnée dans le fichier `Exercice Jeu Personnages Armes.pdf` situé dans le dossier `sujet&classes_fournies`.
 
-- La branche Main contient le projet à réaliser.
-- La branche correction contient le corrigé du projet.
+Les classes Reservoir et le programme principal final sont également donnés dans ce dossier. Les fichiers de tests unitaires pour valider vos méthodes également.
+
+> ℹ️ **Remarque enseignants :**
+> - La branche Main contient le projet à réaliser.
+> - La branche correction contient le corrigé du projet.
 
 ## Lancer le projet
 Pour lancer le projet, il faut faire un clic droit sur le fichier `Main.java` dans l'explorateur de fichiers et choisir "Run Java".
