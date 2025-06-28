@@ -8,4 +8,4 @@ https://docs.github.com/fr/codespaces/setting-up-your-project-for-codespaces/add
 
 
 ## Usage pour le TP de révisions SIO1 SLAM
-Le sujet du TP et le début de l'architecture est dans le dossier revisions. Suivez les consignes du readme pour executer, tester et déboguer sous vscode
+Le sujet du TP et le début de l'architecture se trouve dans le dossier ** revisions **. Suivez les consignes du readme pour executer, tester et déboguer sous vscode

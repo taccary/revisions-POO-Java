@@ -1,7 +1,7 @@
 # Projet Révisions d'été Java : Jeu de Combat de Personnages
 
 Ce projet est un petit jeu de combat entre 2 équipes de personnages créé par Hervé l'Helguen.
-C'est un projet utilisé en devoir de vacances d'été pour les étudiants de SIO1-SLAM. La consigne du travail est donnée dans le fichier `Exercice Jeu Personnages Armes.pdf` situé dans le dossier `sujet&classes_fournies`.
+C'est un projet utilisé en devoir de vacances d'été pour les étudiants de SIO1-SLAM. La consigne du travail est donnée dans le fichier `sujet.md` situé dans le dossier `sujet&classes_fournies/sujet`.
 
 Les classes Reservoir et le programme principal final sont également donnés dans ce dossier. Les fichiers de tests unitaires pour valider vos méthodes également.
 
@@ -30,8 +30,9 @@ L'icône de débogage dans la barre d'outils en haut de l'éditeur permet égale
 Lorsque le débogueur est lancé, il est possible de visualiser les variables, les appels de méthode et d'autres informations utiles dans la vue de débogage.
 
 ## tests unitaires
-Le projet contient des tests unitaires pour vérifier le bon fonctionnement du code. Ces tests sont situés dans le dossier `src/test/java`. Ils sont écrits en utilisant JUnit 5.
+Le projet contient des tests unitaires pour vérifier le bon fonctionnement du code. Ces tests doivent être situés dans le dossier `src/test/java`. Ils sont écrits en utilisant JUnit 5.
 Pour , il est nécessaire d'avoir Maven installé dans le Codespace. Maven est déjà configuré dans ce projet.
+Vous trouverez des modèles de tests dan sle dossier `sujet&classes_fournies/test-unitaires`.
 
 Pour exécuter les tests unitaires, il faut faire un clic droit sur un fichier de test dans l'explorateur de fichiers et choisir "Run Tests" ou "Debug Tests".
 

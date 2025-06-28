@@ -34,11 +34,12 @@ Voici le diagramme de classes de notre jeu :
 ![](media/Image2.png)
 
 
-**La classe Reservoir :**
+## La classe Reservoir :
 
-Ajouter au projet la classe Reservoir.java qui vous est fournie !
+> **Consigne**
+> Ajouter au projet la classe Reservoir.java qui vous est fournie dans le dossier sujet&classes_fournies/classes.
 
-**La classe Arme :**
+## La classe Arme :
 
 ![](media/Image3.png)
 
@@ -52,11 +53,10 @@ La méthode **toLigne()** renvoie une description de l'arme conforme à l'exempl
 
 ![](media/Image4.png)
 
-**Exercice**
+> **Consigne**
+> Ecrire la classe Arme et dans le programme principal, créer 2 armes a1 (katana 100) et a2 (canif 20), affichez-les sous la forme de ligne puis indiquez si a2 est déjà affecté.
 
-- Ecrire la classe Arme et dans le programme principal, créer 2 armes a1 (katana 100) et a2 (canif 20), affichez-les sous la forme de ligne puis indiquez si a2 est déjà affecté.
-
-**La classe Personnage :**
+## La classe Personnage :
 
 ![](media/Image5.png)
 
@@ -90,25 +90,17 @@ La méthode **rencontrer()** renvoie une chaine de caractère qui résume ce qui
 
 - La méthode **recevoirCoup()** retire des vies au personnage en fonction des dégâts de l'arme qui porte le coup.
 
-**Exercice**
+> **Consigne**
+> Ecrire la classe Personnage et dans le programme principal, créer 2 personnages p1 et p2 :
+> 
+> - affectez à l'arme a1 le personnage p1 (2 actions),
+> - affectez à l'arme a2 le personnage p2 (2 actions),
+> - affichez-p1 et p2 sous la forme de ligne,
+> - affichez la présentation de p1 et p2,
+> - affichez la rencontre entre p1 et p2,
+> - testez si p2 est toujours vivant.
 
-- Ecrire la classe Personnage et dans le programme principal, créer 2 personnages p1 et p2 :
-
-- affectez à l'arme a1 le personnage p1 (2 actions),
-
-- affectez à l'arme a2 le personnage p2 (2 actions),
-
-- affichez-p1 et p2 sous la forme de ligne,
-
-- affichez la présentation de p1 et p2,
-
-- affichez la rencontre entre p1 et p2,
-
-- testez si p2 est toujours vivant.
-
-**  **
-
-**La classe Jeu :**
+## La classe Jeu :
 
 ![](media/Image10.png)
 
@@ -128,84 +120,7 @@ La méthode **fini()** vérifie renvoie vrai si l'une de ces 2 conditions est v�
 
 - les personnages de la collection sont tous du même camp.
 
-**Exercice**
-
-- Ecrire la classe Jeu,
-
-- Testez avec le programme principal fourni,
-
-**  **
-
-**Le programme principal (fourni) :**
-
-package jeuconcepts;
-
-public class Main {
-
-public static void main(String\[\] args) {
-
-//déclaration des variables locales
-
-Jeu j = new Jeu();
-
-Personnage p1, p2;
-
-//On affiche la situation de départ
-
-System.out.println("---------Situation de départ---------");
-
-System.out.println(Reservoir.getListeArmes());
-
-System.out.println(j.getListePersonnages());
-
-System.out.println("---------Le jeu commence...---------");
-
-//tant que le jeu n'est pas fini
-
-while(!j.fini()){
-
-//Je récupère un personnage
-
-p1 = j.getUnPersonnage();
-
-//Je récupère un 2ème personnage, autre que p1
-
-do{
-
-p2 = j.getUnPersonnage();
-
-}while(p2 == p1);
-
-//La rencontre a lieu
-
-System.out.println(p1.rencontrer(p2));
-
-//Test si p2 est encore vivant
-
-if(!p2.jeSuisVivant()){
-
-//p2 est mort affichage du message et suppression dans la collection
-
-System.out.println(p2.getNom() + " meurt... et son arme (" + p2.getArme().getNom() + ") est détruite !");
-
-j.retirer(p2);
-
-}
-
-//Affichage de la liste avant la rencontre suivante
-
-System.out.println(j.getListePersonnages());
-
-}
-
-//Le jeu est fini, on affiche le camp gagnant
-
-p1 = j.getUnPersonnage();
-
-System.out.println("Le camp " + p1.getCouleur() + " gagne !!");
-
-System.out.println("---------Fin du jeu...---------");
-
-}
-
-}
+> **Consigne**
+> Ecrire la classe Jeu,
+> 
+> Testez en remplaçant votre actuel programme principal par celui fourni dans le dossier `sujet&classes_fournies/classes`.
