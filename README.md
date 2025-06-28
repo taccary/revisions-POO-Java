@@ -7,3 +7,5 @@ La configuration du Codespace a été réalisée en suivant ce mode [opératoire
 https://docs.github.com/fr/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/setting-up-your-java-project-for-codespaces)
 
 
+## Usage pour le TP de révisions SIO1 SLAM
+Le sujet du TP et le début de l'architecture est dans le dossier revisions. Suivez les consignes du readme pour executer, tester et déboguer sous vscode
