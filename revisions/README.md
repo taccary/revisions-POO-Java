@@ -32,7 +32,7 @@ Lorsque le débogueur est lancé, il est possible de visualiser les variables, l
 ## tests unitaires
 Le projet contient des tests unitaires pour vérifier le bon fonctionnement du code. Ces tests doivent être situés dans le dossier `src/test/java`. Ils sont écrits en utilisant JUnit 5.
 Pour , il est nécessaire d'avoir Maven installé dans le Codespace. Maven est déjà configuré dans ce projet.
-Vous trouverez des modèles de tests dan sle dossier `sujet&classes_fournies/test-unitaires`.
+Vous trouverez des modèles de tests dans le dossier `sujet&classes_fournies/test-unitaires`.
 
 Pour exécuter les tests unitaires, il faut faire un clic droit sur un fichier de test dans l'explorateur de fichiers et choisir "Run Tests" ou "Debug Tests".
 
