@@ -9,6 +9,14 @@ Les classes Reservoir et le programme principal final sont également donnés da
 > - La branche Main contient le projet à réaliser.
 > - La branche correction contient le corrigé du projet.
 
+
+## Premier lancement : compiler le projet
+Ce projet utilise Maven, au premier lancement, il faut compiler le projet et lancer la classe principale :
+```bash
+mvn compile
+mvn exec:java -Dexec.mainClass="jeuconcepts.Main"
+# Cette deuxième commande est utile si vous souhaitez lancer le projet depuis un terminal, sans passer par l'éditeur. Si vous utilisez Visual Studio Code, le bouton "Run Java" ou le clic droit sur Main.java suffisent.
+```
 ## Lancer le projet
 Pour lancer le projet, il faut faire un clic droit sur le fichier `Main.java` dans l'explorateur de fichiers et choisir "Run Java".
 
