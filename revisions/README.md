@@ -9,14 +9,6 @@ Les classes Reservoir et le programme principal final sont également donnés da
 > - La branche Main contient le projet à réaliser.
 > - La branche correction contient le corrigé du projet.
 
-
-## Premier lancement : compiler le projet
-Ce projet utilise Maven, au premier lancement, il faut compiler le projet et lancer la classe principale :
-```bash
-mvn compile
-mvn exec:java -Dexec.mainClass="jeuconcepts.Main"
-# Cette deuxième commande est utile si vous souhaitez lancer le projet depuis un terminal, sans passer par l'éditeur. Si vous utilisez Visual Studio Code, le bouton "Run Java" ou le clic droit sur Main.java suffisent.
-```
 ## Lancer le projet
 Pour lancer le projet, il faut faire un clic droit sur le fichier `Main.java` dans l'explorateur de fichiers et choisir "Run Java".
 
@@ -70,3 +62,12 @@ Les fichiers sources Java se trouvent dans le dossier `src/main/java/jeuconcepts
 Les ressources du projet, telles que les fichiers de configuration, peuvent être placées dans le dossier `src/main/resources`.
 Les fichiers compilés seront générés dans le dossier `target` à la racine du projet. Ce dossier est créé automatiquement par Maven lors de la compilation du projet. Il n'est pas nécessaire de le modifier manuellement. Il contient les classes compilées, les dépendances et d'autres fichiers nécessaires à l'exécution du projet. Il n'est pas nécessaire de le versionner dans Git, car il est généré automatiquement à chaque compilation, c'est pourquoi il est ignoré au niveau du fichier `.gitignore` pour éviter de le versionner.
 
+## En cas d'erreur au premier lancement : compiler le projet
+Ce projet utilise Maven, si vous rencontrez une erreur, il faut compiler le projet :
+```bash
+mvn compile
+```
+Si vous souhaitez lancer le projet depuis un terminal, sans passer par l'éditeur, cette dernière commande sera utile :
+```bash
+mvn exec:java -Dexec.mainClass="jeuconcepts.Main"
+```
